@@ -36,7 +36,7 @@ Small-scale simulation of a Tocos trading system. This micro-version of Toco's d
 
 1. Clone the repository:
 ```bash
-git clone <repository-url.git>
+git clone git@github.com:sarvold/tocos-trading-nestjs-api.git
 cd project-folder
 npm install
 ```
