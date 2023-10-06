@@ -58,7 +58,7 @@ MONGODB_PASSWORD=your-db-password
 MONGODB_DATABASE=your-database-name
 ```
 
-# Usage
+## Usage
 
 Start the development server:
 ```bash
@@ -66,17 +66,38 @@ npm run start:dev
 ```
 The API will be accessible at http://localhost:3000.
 
-# Endpoints
+## Endpoints
+
 . POST /users: Create a new user.
+
 . GET /users: Get a list of all users.
+
 . GET /users/:id: Get details of a specific user by ID.
+
 . PUT /users/:id: Update details of a specific user by ID.
+
 . DELETE /users/:id: Delete a user by ID.
+
 . POST /transactions: Create a new transaction.
+
 . GET /transactions: Get a list of all transactions.
+
 . GET /transactions/:id: Get details of a specific transaction by ID.
 
-# Testing
+## Using Docker
+
+To build the Docker image, navigate to the directory containing the Dockerfile and run the following command:
+```bash
+docker build -t tocos-trading-api .
+```
+To run the Docker image, use the following command:
+```bash
+docker run -p 3000:3000 tocos-trading-api
+```
+The application should now be running in a Docker container and accessible at http://localhost:3000
+
+
+## Testing
 
 Run unit tests:
 ```bash
@@ -88,6 +109,6 @@ Run end-to-end tests:
 npm run test:e2e
 ```
 
-# Contributing
+## Contributing
 
 Contributions are welcome! Please open an issue or create a pull request to discuss changes or improvements.
