@@ -9,6 +9,9 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.useGlobalPipes(new ValidationPipe());
   app.useGlobalFilters(new MongoExceptionFilter());
+  app.enableCors({ // For testing purposes
+    origin: 'http://localhost:8090',
+  });
   await app.listen(3000);
 
   if (module.hot) {
